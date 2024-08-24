@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        let num1=parseFloat(prompt("Enter 1st number:"));
+        let op=prompt("Enter operator:");
+        let num2=parseFloat(prompt("Enter 2nd number:"));
+
+        let result;
+        switch(op){
+            case '+':
+                result=num1+num2;
+                break;
+            case '-':
+                result=num1-num2;
+                break;
+            case '*':
+                result=num1*num2;
+                break;
+            case '/':
+                result=num1/num2;
+                break;
+            case '%':
+                result=num1%num2;
+                break;
+            default:
+                alert("Enter valid operator!!!");
+        }
+        alert(num1+op+num2+"="+result);
+        document.write(num1+op+num2+"="+result)
+    </script>
+</body>
+</html>

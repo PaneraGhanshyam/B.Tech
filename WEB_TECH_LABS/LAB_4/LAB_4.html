@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            border-radius: 10px;
+            border-width: 2px;
+            display: inline-flex;
+            width: 100%;
+        }
+        .form1 ,.form2{
+            border: 1px solid black;
+            border-radius: 10px;
+            border-width: 2px;
+            margin: 5px;
+            padding: 5px;
+            overflow: hidden;
+        }
+        @media only screen and (max-width: 600px) {
+            .container{
+                display:block;
+            }
+        }
+        @media only screen and (min-width: 600px) {
+            .container{
+                width: 100%;
+            }
+            .form1{
+                width: 100%;
+            }
+            .form2{
+                width: 100%;
+            }
+        }
+    </style>
+</head>         
+<body>
+    <div class="container">
+        <div class="form1">
+            <form action="#" method="get">
+                <table align="center">
+                    <caption><h1>Student Registration</h1></caption>
+                    <tr>
+                        <td>
+                            <label for="fullname">FullName:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="fullname" id="fullname" placeholder="Enter here" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email:</label>
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email" placeholder="Enter here" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mobileno">Mobile No:</label>
+                        </td>
+                        <td>
+                            <input type="tel" name="mobileno" id="mobileno" placeholder="Enter here" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="address">Address:</label>
+                        </td>
+                        <td>
+                            <textarea name="address" id="address" rows="5" placeholder="Enter here" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nationality">Nationality:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="nationality" id="nationality" placeholder="Enter here" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dob">Date Of Birth:</label>
+                        </td>
+                        <td>
+                            <input type="date" name="dob" id="dob"  required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gender">Gender:</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="gender" id="m_grnder" value="male" required>
+                            <label for="m_grnder">Male</label>
+                            <input type="radio" name="gender" id="f_gender" value="female" required>
+                            <label for="f_gender">Female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="highestdegree">Highest Degree:</label>
+                        </td>
+                        <td>
+                            <select name="highestdegree" id="highestdegree" required>
+                                <option value="" selected disabled>Select Degree</option>
+                                <option value="high school">High school</option>
+                                <option value="bechalor of technology">B.Tech</option>
+                                <option value="master of technology">M.Tech</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cpi">CPI:</label>
+                        </td>
+                        <td>
+                            <input type="number" name="cpi" id="cpi" min="0" max="10" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="university">University:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="university" id="university" placeholder="Enter here" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="passing_year">Passing Year:</label>
+                        </td>
+                        <td>
+                            <select name="passing_year" id="passing_year">
+                                <option value="" selected disabled>Passing Year</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="submit" id="submit" value="submit">
+                            <input type="reset" name="reset" id="reset" value="reset">
+                        </td>
+                    </tr>
+                </table>
+            </form><br><br><br>
+        </div>
+        <div class="form2">
+            <form action="#" method="get">
+                <table align="center">
+                    <caption><h1>COVID-19 Vaccine Registration Form</h1></caption>
+                    <tr>
+                        <td>
+                            <label for="fname">First name:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="fname" id="fname" placeholder="Enter here" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lname">Last name:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="lname" id="lname" placeholder="Enter here" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="aadharnumber">Aadhar number:</label>
+                        </td>
+                        <td>
+                            <input type="number" name="aadharnumber" id="aadharnumber" placeholder="Enter here" size="12" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="vaccinename">Vaccine name:</label>
+                        </td>
+                        <td>
+                            <select name="vaccinename" id="vaccinename" required>
+                                <option value="" selected disabled>Select Name</option>
+                                <option value="covishield">Covishield</option>
+                                <option value="covaxin">Covaxin</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="vaccincenterename">Vaccine center name:</label>
+                        </td>
+                        <td>
+                            <select name="vaccincenterename" id="vaccincenterename" required>
+                                <option value="" selected disabled>Select Name</option>
+                                <option value="A">Center A</option>
+                                <option value="B">Center B</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dateofdose">Date Of Dose:</label>
+                        </td>
+                        <td>
+                            <input type="date" name="dateofdose" id="dateofdose"  required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dosenum">Dose number:</label>
+                        </td>
+                        <td>
+                            <input type="number" name="dosenum" id="dosenum" min="1" max="2" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="submit1" id="submit1" value="submit">
+                            <input type="reset" name="reset1" id="reset1" value="reset">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
