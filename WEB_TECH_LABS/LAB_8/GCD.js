@@ -7,5 +7,6 @@ function gcd(a, b) {
     return a;
 }
 
+
 result=gcd(48,11);
 console.log(result);
