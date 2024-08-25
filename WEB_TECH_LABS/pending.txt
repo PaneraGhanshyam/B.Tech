@@ -1,3 +1,2 @@
-LAB_5-c
 LAB_6-c1,c2
 LAB_8-complete pending patterns
