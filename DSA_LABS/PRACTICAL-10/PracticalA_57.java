@@ -36,6 +36,7 @@ public class PracticalA_57{
                         First=deleteFirst(First);
                         break;
                 case 4:
+                        First=deleteLast(First);
                         break;
                 case 5:
                         System.out.print("Enter position:");
@@ -97,6 +98,23 @@ public class PracticalA_57{
         }
         else{
             First=First.link;
+            return First;
+        }
+    }
+    static Node deleteLast(Node First){
+
+        if(First==null){
+            System.out.println("List is empty.");
+            return First;
+        }else if(First.link==null){
+            First=null;
+            return First;
+        }else{
+            Node temp=First;
+            while(temp.link.link!=null){
+                temp=temp.link;
+            }
+            temp.link=null;
             return First;
         }
     }
