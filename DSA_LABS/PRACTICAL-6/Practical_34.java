@@ -23,7 +23,7 @@ public class Practical_34 {
         System.out.print("Enter Salary:");
         salary=inp.nextInt();
 
-        EmployeeDetail emp=new EmployeeDetail(emp_id, name, designation, salary);
+        new EmployeeDetail(emp_id, name, designation, salary);
 
         inp.close();
     }
