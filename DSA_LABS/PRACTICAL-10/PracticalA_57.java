@@ -33,6 +33,7 @@ public class PracticalA_57{
                         First=insertEnd(First,data);
                         break;
                 case 3:
+                        First=deleteFirst(First);
                         break;
                 case 4:
                         break;
@@ -87,6 +88,17 @@ public class PracticalA_57{
             return First;
         }
 
+    }
+    static Node deleteFirst(Node First){
+        
+        if(First==null){
+            System.out.println("Linked list is empty.");
+            return First;
+        }
+        else{
+            First=First.link;
+            return First;
+        }
     }
     static Node deleteAtPosition(Node First,int pos){
 
