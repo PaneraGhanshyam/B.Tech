@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Max In Array</title>
+</head>
+<body>
+    <script>
+        let size=parseInt(prompt("Enter size of array : "));
+        //let array=new Array(size); you can also create array like this.
+        let array=[];
+        for (let index = 0; index < size; index++) {
+            array[index]=parseInt(prompt(`Enter ${index+1} element :`));
+        }
+        let max=array[0];
+        for (let index = 1; index < array.length; index++) {
+            if (array[index]>max) {
+                max=array[index];
+            }
+        }
+        document.write("<h1>Array is:"+array+"</h1>");
+        document.write("<h1>Max is "+max+"</h1>");
+    </script>
+</body>
+</html>
