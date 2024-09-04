@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <style>
+        /* General styles for images */
+        img {
+            width: 150px;
+            border: 1px solid black;
+        }
+
+        /* Styling for headers */
+        h1 {
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            color: grey;
+        }
+
+        /* Styling for paragraphs */
+        p {
+            font-size: small;
+        }
+
+        /* Container for faculty and product items */
+        .data {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between items */
+            justify-content: space-between; /* Distribute items with space between them */
+        }
+
+        /* Styling for faculty and product items */
+        .faculty-item, .product-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: antiquewhite;
+            flex: 1 1 calc(33.333% - 20px); /* Adjust width based on space and gap */
+            box-sizing: border-box; /* Include padding and border in the width */
+        }
+
+        /* Styling for product images specifically */
+        .product-item img {
+            width: 150px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="data" id="facultyContainer"></div>
+    <div class="data" id="productContainer"></div>
+
+    <script>
+        let faculties=[
+            {
+                facultyId:1,
+                facultyName:"Dr. Gopi Sanghani",
+                facultyDesignation:"Dean - School of Computer Science",
+                facultyEducationQualification:"Ph.D. , M.E. (CE)",
+                facultyExperience:"24+ Years.",
+                facultyWorkingSince:"jul-2012",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/5---29-04-2023-11-00-29.jpg"
+
+            },
+            {
+                facultyId:2,
+                facultyName:"Dr. Nilesh Gambhava",
+                facultyDesignation:"Professor",
+                facultyEducationQualification:"Ph.D. , M.E. (CE)",
+                facultyExperience:"21+ Years.",
+                facultyWorkingSince:"jul-2009",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/3---28-04-2023-02-02-42.jpg"
+
+            },
+            {
+                facultyId:3,
+                facultyName:"Dr. Pradyumansinh Jadeja",
+                facultyDesignation:"Professor",
+                facultyEducationQualification:"Ph.D. , M.E. (CE)",
+                facultyExperience:"19+ Years.",
+                facultyWorkingSince:"jul-2009",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg"
+
+            },
+            {
+                facultyId:4,
+                facultyName:"Prof. Rupesh Vaishnav",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"Ph.D. (Pursuing), M.E. (CE)",
+                facultyExperience:"16+ Years.",
+                facultyWorkingSince:"may-2013",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/10---28-04-2023-02-07-03.jpg"
+
+            },
+            {
+                facultyId:5,
+                facultyName:"Prof. Firoz Sherasiya",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"Ph.D.(Pursuing), M.E. (CE)",
+                facultyExperience:"19+ Years.",
+                facultyWorkingSince:"dec-2022",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/12---28-04-2023-02-06-51.jpg"
+
+            },
+            {
+                facultyId:6,
+                facultyName:"Prof. Maulik Trivedi",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"Ph.D.(Pursuing), M.Tech.(CSE)",
+                facultyExperience:"16+ Years.",
+                facultyWorkingSince:"jun-2009",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/8---28-04-2023-02-06-25.jpg"
+
+            },
+            {
+                facultyId:7,
+                facultyName:"Prof. Swati Sharma",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"PhD(Pursuing), M.Tech. (CSE)",
+                facultyExperience:"16+ Years.",
+                facultyWorkingSince:"may-2013",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/11---29-04-2023-01-44-21.jpg"
+
+            },
+            {
+                facultyId:8,
+                facultyName:"Prof. Dixita Kagathara",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"Ph.D.(Pursuing), M.Tech. (Web Technology)",
+                facultyExperience:"15+ Years.",
+                facultyWorkingSince:"jul-2009",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/9---28-04-2023-02-06-37.jpg"
+
+            },
+            {
+                facultyId:9,
+                facultyName:"Prof. Mayur Padia",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"M.E. (CE)",
+                facultyExperience:"16+ Years.",
+                facultyWorkingSince:"jul-20",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/13---28-04-2023-02-07-48.jpg"
+
+            },
+            {
+                facultyId:10,
+                facultyName:"Prof. Kartikraj Dhamsaniya",
+                facultyDesignation:"Head of The Department",
+                facultyEducationQualification:"Ph.D. (Pursuing), M.Phil. Mathematics",
+                facultyExperience:"13+ Years.",
+                facultyWorkingSince:"jun-2011",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/112---20-04-2024-09-39-54.jpg"
+
+            },
+            {
+                facultyId:11,
+                facultyName:"Prof. Vaseem Ghada",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"Ph.D. (Pursuing), M.Tech (ICT)",
+                facultyExperience:"15+ Years.",
+                facultyWorkingSince:"aug-2021",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/317---28-04-2023-01-32-29.jpg"
+
+            },
+            {
+                facultyId:12,
+                facultyName:"Prof. Arjun Bala",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"Ph.D.(Pursuing), M.Tech.(CSE)",
+                facultyExperience:"14+ Years.",
+                facultyWorkingSince:"jul-2013",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg"
+
+            },
+            {
+                facultyId:13,
+                facultyName:"Prof. Hemang Chath",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"Ph.D. (Pursuing), M.E. (CE)",
+                facultyExperience:"13+ Years.",
+                facultyWorkingSince:"sep-2021",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/328---28-04-2023-01-33-05.jpg"
+
+            },
+            {
+                facultyId:14,
+                facultyName:"Prof. Shruti Maniar",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"ME(CE),BE(IT)",
+                facultyExperience:"8+ Years.",
+                facultyWorkingSince:"dec-2021",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/336---28-04-2023-01-34-37.jpg"
+
+            },
+            {
+                facultyId:15,
+                facultyName:"Prof. Dharmik Vasiyani",
+                facultyDesignation:"Assistant Professor",
+                facultyEducationQualification:"ME(CE)",
+                facultyExperience:"7+ Years.",
+                facultyWorkingSince:"nov-2021",
+                facultyImage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/335---01-05-2024-07-40-49.JPG"
+
+            }
+        ]
+        let students= [
+                {
+                    StudentID: 1,
+                    StudentName: "KATHAN LUNAGARIYA",
+                    StudentCourse: "B.Tech Computer Science",
+                    StudentYear: "3rd Year",
+                    StudentEnrollment: "190540107121",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/190540107121---11-05-2022-10-07-57.JPG"
+                },
+                {
+                    StudentID: 2,
+                    StudentName: "DHAVAL BERA",
+                    StudentCourse: "B.Tech Computer Science",
+                    StudentYear: "3rd Year",
+                    StudentEnrollment: "190540107007",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/190540107007---11-05-2022-10-47-38.JPG"
+                },
+                {
+                    StudentID: 3,
+                    StudentName: "SOHAM JOSHI",
+                    StudentCourse: "B.Tech Computer Science",
+                    StudentYear: "3rd Year",
+                    StudentEnrollment: "190540107085",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/190540107085---11-05-2022-10-20-13.JPG"
+                },
+                {
+                    StudentID: 4,
+                    StudentName: "IKSHIKA CHOTAI",
+                    StudentCourse: "B.Tech Computer Science",
+                    StudentYear: "3rd Year",
+                    StudentEnrollment: "190540107030",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/190540107030---11-05-2022-10-25-24.JPG"
+                },
+                {
+                    StudentID: 5,
+                    StudentName: "MIRAL SANGANI",
+                    StudentCourse: "B.Tech Computer Science",
+                    StudentYear: "3rd Year",
+                    StudentEnrollment: "190540107181",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/190540107181---22-06-2022-04-13-35.JPG"
+                },
+        ]
+        let products = [
+                {
+                    ProductID: 1,
+                    ProductName: "Laptop",
+                    ProductCategory: "Electronics",
+                    ProductPrice: "$1200",
+                    ProductImage: "https://via.placeholder.com/150?text=Laptop"
+                },
+                {
+                    ProductID: 2,
+                    ProductName: "Smartphone",
+                    ProductCategory: "Electronics",
+                    ProductPrice: "$800",
+                    ProductImage: "https://via.placeholder.com/150?text=Smartphone"
+                },
+                {
+                    ProductID: 3,
+                    ProductName: "Headphones",
+                    ProductCategory: "Electronics",
+                    ProductPrice: "$150",
+                    ProductImage: "https://via.placeholder.com/150?text=Headphones"
+                },
+                {
+                    ProductID: 4,
+                    ProductName: "Smartwatch",
+                    ProductCategory: "Electronics",
+                    ProductPrice: "$250",
+                    ProductImage: "https://via.placeholder.com/150?text=Smartwatch"
+                },
+                {
+                    ProductID: 5,
+                    ProductName: "Television",
+                    ProductCategory: "Electronics",
+                    ProductPrice: "$600",
+                    ProductImage: "https://via.placeholder.com/150?text=Television"
+                },
+                {
+                    ProductID: 6,
+                    ProductName: "Coffee Maker",
+                    ProductCategory: "Appliances",
+                    ProductPrice: "$100",
+                    ProductImage: "https://via.placeholder.com/150?text=Coffee+Maker"
+                },
+                {
+                    ProductID: 7,
+                    ProductName: "Refrigerator",
+                    ProductCategory: "Appliances",
+                    ProductPrice: "$1500",
+                    ProductImage: "https://via.placeholder.com/150?text=Refrigerator"
+                },
+                {
+                    ProductID: 8,
+                    ProductName: "Washing Machine",
+                    ProductCategory: "Appliances",
+                    ProductPrice: "$900",
+                    ProductImage: "https://via.placeholder.com/150?text=Washing+Machine"
+                },
+                {
+                    ProductID: 9,
+                    ProductName: "Blender",
+                    ProductCategory: "Appliances",
+                    ProductPrice: "$60",
+                    ProductImage: "https://via.placeholder.com/150?text=Blender"
+                },
+                {
+                    ProductID: 10,
+                    ProductName: "Microwave",
+                    ProductCategory: "Appliances",
+                    ProductPrice: "$120",
+                    ProductImage: "https://via.placeholder.com/150?text=Microwave"
+                },
+                {
+                    ProductID: 11,
+                    ProductName: "Air Purifier",
+                    ProductCategory: "Home",
+                    ProductPrice: "$200",
+                    ProductImage: "https://via.placeholder.com/150?text=Air+Purifier"
+                }
+        ];
+    function renderFaculties() {
+            const container = document.getElementById('facultyContainer');
+            faculties.forEach(fac => {
+                const facultyItem = document.createElement('div');
+                facultyItem.classList.add('faculty-item');
+
+                facultyItem.innerHTML = `
+                    <img src="${fac.facultyImage}" alt="${fac.facultyName}">
+                    <h1>${fac.facultyName}</h1>
+                    <p>Designation: ${fac.facultyDesignation}</p>
+                    <p>Experience: ${fac.facultyExperience}</p>
+                    <p>Educational Qualification: ${fac.facultyEducationQualification}</p>
+                    <p>Working Since: ${fac.facultyWorkingSince}</p>
+                `;
+                
+                container.appendChild(facultyItem);
+            });
+        }
+        function renderProducts() {
+            const container = document.getElementById('productContainer');
+            products.forEach(prod => {
+                const productItem = document.createElement('div');
+                productItem.classList.add('product-item');
+
+                productItem.innerHTML = `
+                    <img src="${prod.ProductImage}" alt="${prod.ProductName}">
+                    <h1>${prod.ProductName}</h1>
+                    <p>Category: ${prod.ProductCategory}</p>
+                    <p>Price: ${prod.ProductPrice}</p>
+                `;
+                
+                container.appendChild(productItem);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFaculties();
+            renderProducts();
+        });
+
+    </script>
+
+</body>
+</html>
