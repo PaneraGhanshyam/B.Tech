@@ -1,15 +1,13 @@
-import java.util.Scanner;
 public class SinglyCircular {
     static Node First=null,Last=null;
     public static void main(String[] args) {
-        Scanner inp=new Scanner(System.in);
         SinglyCircularInsBeg(10);
         SinglyCircularInsBeg(20);
         SinglyCircularInsBeg(30);
         SinglyCircularInsBeg(40);
         SinglyCircularInsBeg(50);   
-        displayList();     
-        inp.close();
+        displayList();    
+        count(); 
     }
     static void SinglyCircularInsBeg(int x){
         Node newNode=new Node(x);
@@ -31,14 +29,23 @@ public class SinglyCircular {
         else{
             System.out.print("List is : ");
             Node temp=First;
-            while(temp!=Last){
+            do {
                 System.out.print(temp.info+" ");
                 temp=temp.link;
-            }
-            // do {
-            //     System.out.print(temp.info+" ");
-            //     temp=temp.link;
-            // } while (temp != First);
+            } while (temp != First);
+        }
+    }
+    static void count(){
+        if (First==null) {
+            System.out.print("List is Empty.");
+        } else {
+            int count=0;
+            Node temp=First;
+            do {
+                count++;
+                temp=temp.link;
+            } while (temp!=First);
+            System.out.print("\nCount of node is: "+count);
         }
     }
 }
