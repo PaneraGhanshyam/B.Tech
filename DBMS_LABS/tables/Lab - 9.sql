@@ -3,14 +3,7 @@
 ---------------------------------- Part A ------------------------------------------------------
 
 
--- Table Creation for CITY
-CREATE TABLE CITY (
-    CityID INT PRIMARY KEY,
-    Name NVARCHAR(50) UNIQUE NOT NULL,
-    Pincode NVARCHAR(6) NOT NULL,
-    Remarks NVARCHAR(50)
-);
-
+-- 
 INSERT INTO CITY (CityID, Name, Pincode, Remarks) VALUES
 (1, 'Rajkot', '360005', 'Good'),
 (2, 'Surat', '335009', 'Very Good'),
