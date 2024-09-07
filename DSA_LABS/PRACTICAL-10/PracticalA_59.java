@@ -27,6 +27,7 @@ public class PracticalA_59 {
                     First2=insertFirst(First2,data);
                     break;
                 case 3:
+                    compare(First, First2);
                     break;
                 case 4:
                     printList(First,First2);
@@ -74,6 +75,31 @@ public class PracticalA_59 {
             while (temp!=null) {
                 System.out.print(temp.info+" ");
                 temp=temp.link;
+            }
+        }
+    }
+    static void compare(Node First,Node First2){
+        if(First == null || First2 == null){
+            System.out.println("Lists are empty.");
+        }else{
+            boolean isDiff=false;
+            Node temp1=First,temp2=First2;
+
+            while (temp1 != null && temp2 != null) {
+                if (temp1.info==temp2.info) {
+                    temp1=temp1.link;
+                    temp2=temp2.link;
+                    continue;
+                } else {
+                    isDiff=true;
+                    break;
+                }
+            }
+
+            if (isDiff==false) {
+                System.out.print("Lists are same. ");
+            } else {
+                System.out.print("List are not same.");
             }
         }
     }
