@@ -1,4 +1,4 @@
-C:20,27,28,29 codechef,37,42 codechef,43,44 codechef,
+C:27,28,29 codechef,37,42 codechef,43,44 codechef,
 B:24,25,26,32,36,40,41,
 A:31,35,39
 
