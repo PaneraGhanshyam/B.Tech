@@ -5,54 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data</title>
     <style>
-        /* General styles for images */
         img {
             width: 150px;
             border: 1px solid black;
+            border-radius: 10px;
         }
 
-        /* Styling for headers */
         h1 {
-            font-size: medium;
+            font-size: large;
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
             color: grey;
         }
 
-        /* Styling for paragraphs */
         p {
             font-size: small;
         }
 
-        /* Container for faculty and product items */
         .data {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px; /* Space between items */
-            justify-content: space-between; /* Distribute items with space between them */
+            gap: 10px; 
+            justify-content: space-between;
         }
 
-        /* Styling for faculty and product items */
-        .faculty-item, .product-item {
+        .faculty-item, .product-item, .student-item {
             border: 1px solid #ddd;
             padding: 10px;
             border-radius: 5px;
             text-align: center;
             background-color: antiquewhite;
-            flex: 1 1 calc(33.333% - 20px); /* Adjust width based on space and gap */
-            box-sizing: border-box; /* Include padding and border in the width */
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box; 
         }
-
-        /* Styling for product images specifically */
-        .product-item img {
-            width: 150px;
-        }
-
-
     </style>
 </head>
 <body>
     <div class="data" id="facultyContainer"></div>
+    <div class="data" id="studentContainer"></div>
     <div class="data" id="productContainer"></div>
 
     <script>
@@ -347,6 +337,23 @@
                 container.appendChild(facultyItem);
             });
         }
+        function renderStudents() {
+            const container = document.getElementById('studentContainer');
+            students.forEach(student => {
+                const studentItem = document.createElement('div');
+                studentItem.classList.add('student-item');
+
+                studentItem.innerHTML = `
+                    <img src="${student.StudentImage}" alt="${student.StudentName}">
+                    <h1>${student.StudentName}</h1>
+                    <p>Course: ${student.StudentCourse}</p>
+                    <p>Year: ${student.StudentYear}</p>
+                    <p>Enrollment: ${student.StudentEnrollment}</p>
+                `;
+                
+                container.appendChild(studentItem);
+            });
+        }
         function renderProducts() {
             const container = document.getElementById('productContainer');
             products.forEach(prod => {
@@ -363,10 +370,9 @@
                 container.appendChild(productItem);
             });
         }
-        document.addEventListener('DOMContentLoaded', () => {
-            renderFaculties();
-            renderProducts();
-        });
+        renderFaculties();
+        renderProducts();
+        renderStudents();
 
     </script>
 
