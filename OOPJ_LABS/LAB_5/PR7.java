@@ -22,19 +22,23 @@ public class PR7 {
         int index=inp.nextInt();
 
         int array2[]=new int[size];
-        for(int i=index,j=0;i<size;i++,j++){
-            array2[j]=array[i];
-            array[i]=0;
+        int j=index,i=0;
+        while(j<array.length){
+            array2[i]=array[j];
+            i++;
+            j++;
         }
-        for(int i=0,j=index+1;array[i]!=0;i++,j++){
-            array2[j]=array[i];
+        j=0;
+        while(j<index){
+            array2[i]=array[j];
+            i++;
+            j++;
         }
 
-        System.out.print("New array is : ");
-        for (int i = 0; i < array2.length; i++) {
-            System.out.print(array2[i]+",");
+        System.out.print("Array2 is : ");
+        for (int k = 0; k < array2.length; k++) {
+            System.out.print(array2[k]+",");
         }
-
         inp.close();
     }
 }
