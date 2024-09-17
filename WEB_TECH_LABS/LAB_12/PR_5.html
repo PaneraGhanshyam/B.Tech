@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Element Properties</title>
+    <style>
+        #myElement {
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid black;
+            width: 200px;
+            text-align: center;
+            font-size: 16px;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="myElement">Hello, World!</div>
+    <button id="changeProperties">Change Properties</button>
+    <button id="toggleVisibility">Toggle Visibility</button>
+    <button id="resetProperties">Reset Properties</button>
+
+    <script>
+        const myElement = document.getElementById('myElement');
+        const changePropertiesButton = document.getElementById('changeProperties');
+        const toggleVisibilityButton = document.getElementById('toggleVisibility');
+        const resetPropertiesButton = document.getElementById('resetProperties');
+
+        function changeProperties() {
+            myElement.style.backgroundColor = 'lightcoral';
+            myElement.style.color = 'white';
+            myElement.style.fontSize = '24px';
+            myElement.style.border = '2px dashed red';
+            myElement.innerText = 'Properties Changed!';
+        }
+
+        function toggleVisibility() {
+            if (myElement.classList.contains('hidden')) {
+                myElement.classList.remove('hidden');
+                myElement.innerText = 'Hello, World!';
+            } else {
+                myElement.classList.add('hidden');
+            }
+        }
+
+        function resetProperties() {
+            myElement.style.backgroundColor = 'lightblue';
+            myElement.style.color = 'black';
+            myElement.style.fontSize = '16px';
+            myElement.style.border = '2px solid black';
+            myElement.innerText = 'Hello, World!';
+            myElement.classList.remove('hidden');
+        }
+
+        changePropertiesButton.addEventListener('click', changeProperties);
+        toggleVisibilityButton.addEventListener('click', toggleVisibility);
+        resetPropertiesButton.addEventListener('click', resetProperties);
+    </script>
+</body>
+</html>
