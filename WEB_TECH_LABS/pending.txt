@@ -1,4 +1,3 @@
-LAB_8-complete pending patterns
 LAB_9- 5
 LAB_10- 4
 LAB_11- 2,4
