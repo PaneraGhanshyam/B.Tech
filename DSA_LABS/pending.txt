@@ -2,4 +2,4 @@ C:29 codechef
 B:
 A:
 
-Practical-13 singly circular
+practical-13 singly circular
