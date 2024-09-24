@@ -11,7 +11,7 @@
     <p id="para"></p>
     <p id="wordCount"></p>
     <script>
-        function updateTextAndWordCount() {
+        function wordCount() {
             const text = $("#textarea").val();
             $("#para").text(text);
             
@@ -19,7 +19,7 @@
             $("#wordCount").text("Word Count: " + wordCount);
         }
 
-        $("#textarea").on('input', updateTextAndWordCount);
+        $("#textarea").on('input', wordCount);
     </script>
 </body>
 </html>
