@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+      <style>
+        #btn{
+            transition: margin-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+      </style>
+    <title>Pr1</title>
+  </head>
+  <body>
+    <button id="btn">Button</button>
+    <script>
+        $("#btn").click(function (){
+            $("#btn").css("margin-left","+=300px");
+        });
+    </script>
+  </body>
+</html>
