@@ -1,3 +1,6 @@
 {
-    "inference.model": "stable-code:3b-code-q4_0"
+    "inference.model": "stable-code:3b-code-q4_0",
+    "cSpell.words": [
+        "Darshan"
+    ]
 }
