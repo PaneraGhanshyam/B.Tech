@@ -5,20 +5,6 @@ public class LAB6_4 {
     public static void main(String[] args) {
         Scanner inp=new Scanner(System.in);
         BankAccount b=new BankAccount();
-
-        System.out.print("Enter account no : ");
-        long accNo=inp.nextLong();
-        inp.nextLine();
-        System.out.print("Enter user name :");
-        String userName=inp.nextLine();
-        System.out.print("Enter email : ");
-        String email=inp.nextLine();
-        System.out.print("Enter account type : ");
-        String accType=inp.nextLine();
-        System.out.print("Enter account balance : ");
-        double balance=inp.nextDouble();
-
-        b.setAccountDetails(accNo, userName, email, accType, balance);
         b.getAccountDetails();
 
         inp.close();
@@ -31,12 +17,20 @@ class BankAccount{
     private String accType;
     private double accBal;
 
-    public void setAccountDetails(long accNo,String userName,String email,String accType,double accBal){
-        this.accNo=accNo;
-        this.userName=userName;
-        this.email=email;
-        this.accType=accType;
-        this.accBal=accBal;
+    public BankAccount(){
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Enter account no : ");
+        this.accNo=inp.nextLong();
+        inp.nextLine();
+        System.out.print("Enter user name :");
+        this.userName=inp.nextLine();
+        System.out.print("Enter email : ");
+        this.email=inp.nextLine();
+        System.out.print("Enter account type : ");
+        this.accType=inp.nextLine();
+        System.out.print("Enter account balance : ");
+        this.accBal=inp.nextDouble();
+        inp.close();
     }
 
     public void getAccountDetails(){
