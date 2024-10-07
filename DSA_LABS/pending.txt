@@ -1,5 +1,5 @@
 C:29 codechef,42 codechef,43,44 codechef,49 codechef,53,54,55 codechef,76
 B:40,41,46,48,51,73,74,75,
-A:47,,72
+A:47,72
 
-practical-11,12
+practical-11,12,14,15,16,17,19,20,21,22
