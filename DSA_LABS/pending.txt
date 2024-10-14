@@ -1,5 +1,6 @@
-C:29 codechef,42 codechef,43,44 codechef,49 codechef,53,54,55 codechef,76
-B:40,41,46,48,51,73,74,75,
+C:29 codechef,42 codechef,43,44 codechef,49 codechef,53,54,55 codechef,76,100 codechef
+B:40,41,46,48,51,73,74,75,95,98
 A:47,72
 
-practical-11,12,14,15,16,17,19,20,21,22
+practical-11,12,14,15,17,21
+complete programs except few sorting and hashing 
