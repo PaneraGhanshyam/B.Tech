@@ -22,11 +22,13 @@ public class LAB7_2 {
 
         pp.setAuthor(BAuth);
         pp.setTitle(title);
-
-        System.out.println("\n\nbook author is "+bp.getAuthor());
+        
+        System.out.println("\n\n---------Book Details---------");
+        System.out.println("book author is "+bp.getAuthor());
         System.out.println("book title is "+bp.getTitle());
 
-        System.out.println("\n\nPaper author is "+pp.getAuthor());
+        System.out.println("---------Paper Details---------");
+        System.out.println("Paper author is "+pp.getAuthor());
         System.out.println("Paper title is "+pp.getTitle());
         
         inp.close();
