@@ -128,5 +128,42 @@ db.Bank_Info.find().pretty()
 db.Bank_Info.findOne()
 
 4. Insert following document to Deposit collection. (Use: insertOne())
+db.Deposit.insertOne({
+    ACTNO: 109,
+    CNAME: "KIRTI",
+    BNAME: "VIRAR",
+    AMOUNT: 3000.00,
+    DATE: "3-5-97"
+});
+
+5. Insert following documents to your collection. (Use: insertMany())
+db.Deposit.insertMany([
+    {
+        ACTNO: 110,
+        CNAME: "MITALI",
+        BNAME: "ANDHERI",
+        AMOUNT: 4500.00,
+        DATE: "4-9-95"
+    },
+    {
+        ACTNO: 111,
+        CNAME: "RAJIV",
+        BNAME: "NEHRU PLACE",
+        AMOUNT: 7000.00,
+        DATE: "2-10-98"
+    }
+]);
+
+6. db.Deposit.find({}, { CNAME: 1, BNAME: 1, AMOUNT: 1 })
+7. db.Deposit.find().sort({ CNAME: 1 })
+8. db.Deposit.find().sort({ BNAME: -1 })
+9. db.Deposit.find().sort({ ACTNO: 1, AMOUNT: -1 })
+10. db.Deposit.find().limit(2)
+11. db.Deposit.find().skip(2).limit(1)
+12. db.Deposit.find().skip(5).limit(2)
+13. db.Deposit.countDocuments()
+14. db.Deposit.findOne()
+15. db.Deposit.find().sort({ AMOUNT: -1 })
+
 
 
