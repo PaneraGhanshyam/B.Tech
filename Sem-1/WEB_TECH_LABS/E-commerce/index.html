@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Home - GreenIfy</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.jpg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .header-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+        header {
+            position: relative;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-img-top {
+        height: 200px; 
+        object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="./assets/3195650-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.609); z-index: 1;">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand fs-1 fw-bold" href="#!"><span class="text-success">Green</span><span class="text-dark">Ify</span></a>
+            <button class="navbar-toggler" style="background-color: rgba(255, 255, 255, 0);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 fs-4">
+                    <li class="nav-item"><a class="nav-link active text-dark fw-semibold" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="aboutUs.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="contactUs.html">Contact Us</a></li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark me-1 fw-semibold" type="submit">LogIn</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <header class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Embrace Sustainable Eating</h1>
+                <p class="lead fw-normal text-white-50 mb-0" >Explore eco-friendly food choices for a greener tomorrow</p>
+            </div>
+        </div>
+    </header>
+    
+    <section class="py-5" style="background-color: rgba(255, 255, 255, 0); z-index: 1;">
+        <div class="container px-4 px-lg-5 ">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="vegetable-cards">
+            </div>
+        </div>
+    </section>
+    
+    <footer class="py-4" style="background-color: rgba(255, 255, 255, 0.609); z-index: 1;">
+        <div class="container"><p class="m-0 text-center text-dark fw-bold fs-3">Copyright &copy; <span class="text-success">Green</span><span class="text-dark">Ify</span> 2024</p></div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const vegetables = [
+            { name: "Carrot", price: "$1.50", img: "https://img.freepik.com/premium-photo/product-shots-carrots-high-quality-4k-ultra-hd_670382-96539.jpg" },
+            { name: "Broccoli", price: "$2.00", img: "https://images.pexels.com/photos/47347/broccoli-vegetable-food-healthy-47347.jpeg?auto=compress&cs=tinysrgb&w=600" },
+            { name: "Spinach", price: "$1.75", img: "https://images.pexels.com/photos/2325843/pexels-photo-2325843.jpeg?auto=compress&cs=tinysrgb&w=600" },
+            { name: "Tomato", price: "$2.50", img: "https://images.pexels.com/photos/96616/pexels-photo-96616.jpeg?auto=compress&cs=tinysrgb&w=600" },
+            { name: "Cucumber", price: "$1.25", img: "https://images.pexels.com/photos/2329440/pexels-photo-2329440.jpeg?auto=compress&cs=tinysrgb&w=600" },
+            { name: "Bell Pepper", price: "$2.75", img: "https://images.pexels.com/photos/1434254/pexels-photo-1434254.jpeg?auto=compress&cs=tinysrgb&w=600" },
+            { name: "Potato", price: "$0.80", img: "https://images.pexels.com/photos/7129145/pexels-photo-7129145.jpeg?auto=compress&cs=tinysrgb&w=600" },
+            { name: "Onion", price: "$1.00", img: "https://images.pexels.com/photos/7129153/pexels-photo-7129153.jpeg?auto=compress&cs=tinysrgb&w=600" }
+        ];
+
+        const vegetableCardsContainer = document.getElementById('vegetable-cards');
+
+        vegetables.forEach(vegetable => {
+            const card = document.createElement('div');
+            card.className = 'col mb-5';
+
+            card.innerHTML = `
+                <div class="card h-100">
+                    <img class="card-img-top" src="${vegetable.img}" alt="${vegetable.name}" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">${vegetable.name}</h5>
+                            ${vegetable.price}
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                    </div>
+                </div>
+            `;
+
+            vegetableCardsContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>

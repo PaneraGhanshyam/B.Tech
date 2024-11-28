@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB_6C2</title>
+    <style>
+
+        .earth{ 
+            padding: 200px;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            z-index: 1;
+            animation: rotateEarth 30s linear infinite; 
+        }
+
+        .moon{
+            position: absolute;
+            top:270px;
+            left: 270px;
+            animation: orbita 15s linear infinite;
+            z-index: 0
+        }
+
+        @keyframes rotateEarth {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes orbita {
+            0%{width: 55px; left: 500px}
+            24%{z-index: 0}
+            25%{top: 450px; left: 670px;  z-index: 2}
+            50%{width: 150px;}
+            74%{z-index: 2;}
+            75%{top: 400px; left: 140px; z-index: 0 }
+            100%{width: 55px; left: 500px; transform: rotate(360deg);}
+        }
+
+        body {
+        background: url('cosmos.jpg');
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <img src="earth.png" alt="image not found" class="earth">
+    <img src="moon.png" alt="image not found" class="moon">
+</body>
+</html>

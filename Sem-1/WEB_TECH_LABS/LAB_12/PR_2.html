@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse event</title>
+</head>
+<body>
+    <main>
+        <h1 onclick="mouseClick()" oncontextmenu="contextMenu()" ondblclick="dblClick()"
+        onmousedown="mouseDown()" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"
+        onmousemove="mouseMove()" onmouseout="mouseOut()" onmouseover="mouseOver()"
+        onmouseup="mouseUp()">Click here</h1>
+        <h2 id="display"></h2>
+    </main>
+    <script>
+        function mouseClick(){
+            document.getElementById("display").innerText="Mouse Click";
+        }
+        function contextMenu(){
+            document.getElementById("display").innerText="Right Click";
+        }
+        function dblClick(){
+            document.getElementById("display").innerText="Double Click";
+        }
+        function mouseDown(){
+            document.getElementById("display").innerText="Mouse Down";
+        }
+        function mouseEnter(){
+            document.getElementById("display").innerText="Mouse pointer moves into an element";
+        }
+        function mouseLeave(){
+            document.getElementById("display").innerText="Mouse pointer moves out from  element";
+        }
+        function mouseMove(){
+            document.getElementById("display").innerText="Mouse moves over an element";
+        }
+        function mouseOut(){
+            document.getElementById("display").innerText="Mouse pointer moves out from element";
+        }
+        function mouseOver(){
+            document.getElementById("display").innerText="Mouse over";
+        }
+        function mouseUp(){
+            document.getElementById("display").innerText="Mouse up";
+        }
+    </script>
+</body> 
+</html>

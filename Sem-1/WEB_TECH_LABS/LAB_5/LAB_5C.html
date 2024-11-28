@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB_5C</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 10vh;
+            background-color: red; 
+            overflow: hidden;
+        }
+        .main{
+            margin-top: 5px;
+            height: 80vh;
+            overflow: hidden;
+        }
+        .nav{
+            display: flex;
+            height: 80vh;
+            align-items: center;
+            justify-content: center;
+            background-color: blue;
+            width: 20%; 
+            overflow: hidden;
+            float: left;
+        }
+        .content{
+            position: relative;
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 79%;
+            height: 80vh;
+            float: right;
+        }
+        .sidebar{
+            position: absolute;
+            overflow: hidden;
+            right: 8px;
+            height: 20vh;
+            width: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: green;
+            border-left: 5px solid black;
+            border-bottom: 5px solid black;            
+        }
+        .footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(19, 218, 232);
+            height: 10vh;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Header</h1>
+    </header>
+    <main class="main">
+        <nav class="nav">
+            <h2>Navigation</h2>
+        </nav>
+        <div class="content">
+            <h2>Content</h2>
+        </div>
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+        </aside>
+    </main>
+    <footer class="footer">
+        <h1>Footer</h1>
+    </footer>
+</body>
+</html>

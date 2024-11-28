@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #carousel {
+            width: 300px;
+            overflow: hidden;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="carousel">
+        <div class="carousel-images">
+            <img src="https://via.placeholder.com/300x200?text=Image+1" alt="Image 1">
+            <img src="https://via.placeholder.com/300x200?text=Image+2" alt="Image 2">
+            <img src="https://via.placeholder.com/300x200?text=Image+3" alt="Image 3">
+        </div>
+    </div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+
+    <script>
+        $(document).ready(function(){
+            let currentImageIndex = 0;
+            const totalImages = $('.carousel-images img').length;
+
+            function updateCarousel() {
+                const offset = currentImageIndex * -300;
+                $('.carousel-images').css('transform', `translateX(${offset}px)`);
+            }
+
+            $('#next').click(function() {
+                if (currentImageIndex < totalImages - 1) {
+                    currentImageIndex++;
+                } else {
+                    currentImageIndex = 0;
+                }
+                updateCarousel();
+            });
+
+            $('#prev').click(function() {
+                if (currentImageIndex > 0) {
+                    currentImageIndex--;
+                } else {
+                    currentImageIndex = totalImages - 1;
+                }
+                updateCarousel();
+            });
+        });
+    </script>
+</body>
+</html>

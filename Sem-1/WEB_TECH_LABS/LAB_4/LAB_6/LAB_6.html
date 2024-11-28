@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_6</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .container{
+            background-color: whitesmoke;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 100%;
+        }
+        .container header,footer{
+            background-color: black;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+        }
+        .content{
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            display: inline-flex;
+        }
+        .box1, .box2{
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 5px;
+            background-color: aliceblue;
+            padding: 5px;
+            overflow: hidden;
+        }
+        .content dd{
+            font-size: small;
+        }
+        @media only screen and (max-width: 600px) {
+            .content{
+                display:block;
+            }
+        }
+        @media only screen and (min-width: 1200px) {
+            .content{
+                width: 100%;
+            }
+            .box1{
+                width: 100%;
+            }
+            .box2{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Welcom to My Website</header>
+        <div class="content">
+            <div class="box1">
+                <h3><b>Content Section</b></h3>
+                <p>this is a simple demonstration of css properties including margin, border, and padding. Resize the browser window to see the media query i action.</p>
+            </div>
+            <div class="box2">
+                <aside>
+                    <b><h3>Sidebar</h3></b>
+                    <p>This is sidebar with some additional content.</p>
+                </aside>
+            </div>
+        </div>
+        <footer>© 2024 My Website</footer>
+    </div>
+</body>
+</html>
